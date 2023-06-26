@@ -1106,6 +1106,8 @@ loop:
 		// This keeps "../" as-is, but normalizes "/../" to "/". Or Windows:
 		// This keeps "..\" as-is, but normalizes "\..\" to "\".
 		hdr.Name = filepath.Clean(hdr.Name)
+		now := time.Now().UnixMilli()
+		fmt.Printf("========================================%d,%v,%v\n", now, hdr.Name, hdr.Size)
 
 		for _, exclude := range options.ExcludePatterns {
 			if strings.HasPrefix(hdr.Name, exclude) {
