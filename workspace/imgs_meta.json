@@ -1,0 +1,11 @@
+{
+
+    "tensorflow_bert_serve": {
+        "image_name": "tensorflow/serving:2.4.0-gpu",
+        "debloated_img_name": "tensorflow/tensorflow_serving_2.4_gpu_bert_debloat_bin_tf_serving_entrypoint.sh",
+        "pkgs_path": "/debloats/tf_official/bert/serving/tensorflow_serving_2.4.0-gpu_packages.csv",
+        "files_path": "/debloats/tf_official/bert/serving/tensorflow_serving_2.4.0-gpu_packages_files.csv",
+        "debloated_files_path": "/debloats/tf_official/bert/serving/serving.csv",
+        "cmd":"/usr/bin/tf_serving_entrypoint.sh"
+    }
+}
